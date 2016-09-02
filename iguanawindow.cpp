@@ -8,6 +8,13 @@ IguanaWindow::~IguanaWindow()
 
 IguanaWindow::IguanaWindow()
 {
+
+    // debugging system variables
+    //QStringList environment = QProcessEnvironment::systemEnvironment().toStringList();
+    //qDebug() << environment << "\n";
+    //qDebug() << QProcessEnvironment::systemEnvironment().value("IguanaExe") << "\n";
+
+
     // system tray creation
     createActions();
     createTrayIcon();
@@ -56,7 +63,7 @@ void IguanaWindow::runIguana()
     process = new QProcess();
     // location of iguana to start process
     // TODO create to read system variable
-    process->start("C:\\Users\\usamir\\Dropbox\\Upwork\\SuperNET\\agents\\win64\\iguana");
+    process->start(QProcessEnvironment::systemEnvironment().value("IguanaExe") + "\\iguana");
 }
 
 void IguanaWindow::killProcess()
