@@ -4,6 +4,12 @@
 #include <QDialog>
 #include <QSystemTrayIcon>
 #include <QProcess>
+#include <QAction>
+#include <QMenu>
+#include <QApplication>
+#include <QDesktopServices>
+#include <QUrl>
+#include <QMessageBox>
 
 class QAction;
 class QMenu;

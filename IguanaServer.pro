@@ -20,22 +20,5 @@ HEADERS  += iguanawindow.h
 RESOURCES += \
     iguanaserver.qrc
 
-# install
-#target.path = $$[QT_INSTALL_EXAMPLES]/desktop/iguanaserver
-#sources.files = $$SOURCES $$HEADERS $$RESOURCES $$FORMS IguanaServer.pro resources images
-#sources.path = $$[QT_INSTALL_EXAMPLES]/desktop/iguanaserver
-#INSTALLS += target sources
-
-#symbian: include($$QT_SOURCE_TREE/examples/symbianpkgrules.pri)
-
-#wince* {
- #       CONFIG(debug, release|debug) {
-  #              addPlugins.files = $$QT_BUILD_TREE/plugins/imageformats/qsvgd4.dll
-   #     }
-    #    CONFIG(release, release|debug) {
-     #           addPlugins.files = $$QT_BUILD_TREE/plugins/imageformats/qsvg4.dll
-      #  }
-       # addPlugins.path = imageformats
-        #DEPLOYMENT += addPlugins
-#}
+CONFIG+= static
 
