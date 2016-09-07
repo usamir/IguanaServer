@@ -37,3 +37,21 @@ Building:
   5.	Change LFLAGS in Makefile to be like LFLAGS = -Wl, -rpath, /home/<user>/Qt5.7.0/5.7/gcc_64/lib
   6.	Run make
   7.	Run ./IguanaServer
+
+Building QT Application with terminal on MacOSX
+
+Download Qt
+  1.	Download qt-opensource-linux-x64-5.7.0.run : https://www.qt.io/download-open-source/#section-2
+  2.	Extract qt-everywhere-opensource-src-5.7.0 and rename extracted folder to Qt-Static for easier later manipulations with this directory 
+  3.	cd <path-to-Qt-static>
+  4.	Run ./configure -static
+  5.	In terminal hit o, once it ask for explanation is it for commercial, or open-source usage
+  6.	Accept usage and terms, hit yes
+  7.	After it is finished run make, optional is to run make install to install qt to /usr/local/Qt-5.7.0 and change this installed to Qt-static
+
+Building
+  1.	Create new build folder
+  2.	Run terminal and navigate to build folder
+  3.	Run /<path-to-qt-static>/qtbase/bin/qmake <path_to_IguanaServer.pro>
+  4.	Step 3 will create Makefile in folder build, then run make
+  5.	Build is finished, now run ./IguanaServer
