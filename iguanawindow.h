@@ -10,6 +10,8 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include <QMessageBox>
+#include <QSettings>
+#include <QFileInfo>
 
 class QAction;
 class QMenu;
