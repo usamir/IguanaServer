@@ -69,7 +69,7 @@ void IguanaWindow::runIguana()
     process->start("\"/Library/Application\ Support/Iguana/iguana\"");
     #elif _WIN32
     QSettings settings(QSettings::IniFormat, QSettings::UserScope, "Iguana", "application");
-    QString location = QFileInfo(settings.fileName()).absolutePath() + "/iguana";}
+    QString location = QFileInfo(settings.fileName()).absolutePath() + "/iguana";
     process->start(location);
     #endif
 }
