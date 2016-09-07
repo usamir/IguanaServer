@@ -21,4 +21,4 @@ RESOURCES += \
     iguanaserver.qrc
 
 CONFIG+= static
-
+CONFIG-=app_bundle
