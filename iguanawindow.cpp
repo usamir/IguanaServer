@@ -1,7 +1,6 @@
 #include "iguanawindow.h"
 //#include <QDebug>
 
-
 IguanaWindow::~IguanaWindow()
 {
 
@@ -66,7 +65,8 @@ void IguanaWindow::runIguana()
     // TODO create to read system variable for windows users
     //process->start(QProcessEnvironment::systemEnvironment().value("IguanaExe") + "\\iguana");
     #ifdef __APPLE__
-    process->start("\"/Library/Application\ Support/Iguana/iguana\"");
+    QString location = QStandardPaths::writableLocation(QStandardPaths::HomeLocation); 
+    process->start(location + "\"/Library/Application\ Support/Iguana/iguana\"");
     #elif _WIN32
     QSettings settings(QSettings::IniFormat, QSettings::UserScope, "Iguana", "application");
     QString location = QFileInfo(settings.fileName()).absolutePath() + "/iguana";

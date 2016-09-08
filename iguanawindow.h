@@ -12,6 +12,7 @@
 #include <QMessageBox>
 #include <QSettings>
 #include <QFileInfo>
+#include <QStandardPaths>
 
 class QAction;
 class QMenu;
