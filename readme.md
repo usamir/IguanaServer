@@ -34,7 +34,7 @@ Building:
   2.	Run terminal and navigate to build folder
   3.	Run /home/<user>/Qt5.7.0/5.7/gcc_64/bin/qmake <path_to_IguanaServer.pro>
   4.	Step 3 will create Makefile in folder build, which need to be edited
-  5.	Change LFLAGS in Makefile to be like LFLAGS = -Wl, -rpath, /home/<user>/Qt5.7.0/5.7/gcc_64/lib
+  5.	Change LFLAGS in Makefile to be like LFLAGS = -Wl,-rpath,/home/<user>/Qt5.7.0/5.7/gcc_64/lib
   6.	Run make
   7.	Run ./IguanaServer
 
