@@ -23,3 +23,4 @@ RESOURCES += \
 CONFIG+= static
 
 ICON = iguana.icns
+win32: RC_ICONS = iguana.ico
