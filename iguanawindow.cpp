@@ -66,15 +66,20 @@ void IguanaWindow::runIguana()
     //process->start(QProcessEnvironment::systemEnvironment().value("IguanaExe") + "\\iguana");
     QString location = "";
     #ifdef __APPLE__
-    location = QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "\"/Library/Application\ Support/Iguana\"";
+    location = QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "\"/Library/Application\ Support/Iguana/iguana\"";
+    process->setWorkingDirectory(
+                QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "/Library/Application\ Support/Iguana");
+    process->start(location);
     #elif _WIN32
     QSettings settings(QSettings::IniFormat, QSettings::UserScope, "Iguana", "application");
     location = QFileInfo(settings.fileName()).absolutePath();
-    #elif __linux__
-    location = "/opt/Iguana";
-    #endif
     process->setWorkingDirectory(location);
     process->start(location + "/iguana");
+    #elif __linux__
+    location = "/opt/Iguana";
+    process->setWorkingDirectory(location);
+    process->start(location + "/iguana");   
+    #endif
 }
 
 void IguanaWindow::killProcess()
