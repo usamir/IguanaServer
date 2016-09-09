@@ -21,3 +21,5 @@ RESOURCES += \
     iguanaserver.qrc
 
 CONFIG+= static
+
+ICON = iguana.icns
