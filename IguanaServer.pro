@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.8
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
